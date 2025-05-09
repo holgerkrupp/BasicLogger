@@ -41,9 +41,9 @@ public struct LogView: View {
     
     private var filteredLogs: [String] {
         if searchText.isEmpty {
-            return logger.logs
+            return logger.logs.reversed()
         } else {
-            return logger.logs.filter { $0.localizedCaseInsensitiveContains(searchText) }
+            return logger.logs.filter { $0.localizedCaseInsensitiveContains(searchText) }.reversed()
         }
     }
 }
