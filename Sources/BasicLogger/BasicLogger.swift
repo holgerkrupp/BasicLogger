@@ -12,7 +12,6 @@ public class BasicLogger: ObservableObject {
     private init() {
         let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         self.fileURL = directory.appendingPathComponent("log.txt")
-        print(fileURL.absoluteString)
         loadLogs()
     }
     
